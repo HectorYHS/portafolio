@@ -1,12 +1,12 @@
 <template>
   <v-app :style="{ background: $vuetify.theme.themes.dark.background }">
-  <NavBar />
+  <NavBar class="ocultar-div"/>
   <v-main>
     <v-container fluid>
       <v-row align="center">
         <div id="home"></div>
         <v-col cols="6">
-          <v-img src="gitlab.png" contain max-height="500"></v-img>
+          <v-img src="perfil.png" contain max-height="200"></v-img>
         </v-col>
         <v-col cols="6" class="justify-text-center">
           <h3 style="color:#B71C1C">¡Hola! Me llamo Héctor</h3>
@@ -98,104 +98,124 @@
           <v-card height="250px" style="color:#1E1E1E">          
             <v-img src="willis/Willis-motos-1.PNG" cover></v-img>
           </v-card>
+          <v-card-actions>
+            <v-btn color="#111111" style="color:white" dark text class="ml-n4" append-icon="fas fa-motorcycle">
+              Willis motos.
+              <v-dialog v-model="modalWillis" activator="parent" width="auto" height="auto">
+                <v-card max-width="1000" min-width="auto">
+                  <v-card-title>
+                    Proyecto realizado con VueJs/Vuetify y Laravel
+                  </v-card-title> 
+                  <v-card-media>                    
+                  <v-carousel show-arrows="hover" delimiter-icon="fas fa-circle" next-icon="fas fa-arrow-right" prev-icon="fas fa-arrow-left">
+                    <v-carousel-item>
+                      <img src="willis/Willis-motos-1.PNG" style="width: 100%; height: 100%;">
+                    </v-carousel-item>
+                
+                    <v-carousel-item>
+                      <img src="willis/Willis-motos-2.PNG" style="width: 100%; height: 100%;">
+                    </v-carousel-item>
+                
+                    <v-carousel-item>
+                      <img src="willis/Willis-motos-3.PNG" style="width: 100%; height: 100%;">
+                    </v-carousel-item>
+  
+                    <v-carousel-item>
+                      <img src="willis/Willis-motos-4.PNG" style="width: 100%; height: 100%;">
+                    </v-carousel-item>
+                  </v-carousel>
+                  </v-card-media>        
+                </v-card>
+              </v-dialog>
+            </v-btn><br />
+          </v-card-actions>
         </v-col>
         <v-col md="3">
           <v-card class="pa-2 py-12" outline tile height="250px" style="color:#1E1E1E">
-            <v-img src="https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?w=800" cover></v-img>
+            <v-img src="claro_collection.PNG" cover></v-img>
           </v-card>
-        </v-col>
-        <v-col md="3" offset-md="3">
-          <v-btn color="#111111" style="color:white" dark text class="ml-n4" append-icon="fas fa-motorcycle">
-            Willis motos.
-            <v-dialog v-model="modalWillis" activator="parent" height="50%" width="50%" >
-              <v-card>          
-                <v-carousel show-arrows="hover" delimiter-icon="fas fa-circle" next-icon="fas fa-arrow-right" prev-icon="fas fa-arrow-left">
-                  <v-carousel-item
-                    src="willis/Willis-motos-1.PNG" 
-                    width="auto"
-                  ></v-carousel-item>
-                
-                  <v-carousel-item
-                    src="willis/Willis-motos-2.PNG"
-                    width="auto"
-                  ></v-carousel-item>
-                
-                  <v-carousel-item
-                    src="willis/Willis-motos-3.PNG"
-                    width="auto"
-                  ></v-carousel-item>
-  
-                  <v-carousel-item
-                    src="willis/Willis-motos-4.PNG"
-                    width="auto"
-                  ></v-carousel-item>
-                </v-carousel>
-              </v-card>
-            </v-dialog>
-          </v-btn><br />
-        </v-col>
-        <v-col md="3" >
-          <v-btn color="#111111" style="color:white" dark text class="ml-n4" append-icon="fa-sharp fa-solid fa-phone-volume">
-            Claro collection.
-            <v-dialog v-model="modalClaro" activator="parent" style="height: 500px;">
-              <v-card>   
-                <embed cover src="Claro Collection.mp4" contain style="height: 500px;">                   
-              </v-card>
-            </v-dialog>
-          </v-btn><br />
+          <v-card-actions>
+            <v-btn color="#111111" style="color:white" dark text class="ml-n4" append-icon="fa-sharp fa-solid fa-phone-volume">
+              Claro collection.              
+              <v-dialog v-model="modalClaro" activator="parent" width="auto" height="auto">
+                <v-card max-width="1000" min-width="auto">
+                  <v-card-title>
+                    Proyecto realizado con VueJs/Vuetify y Laravel
+                  </v-card-title> 
+                  <v-card-media>                  
+                    <v-carousel show-arrows="hover" delimiter-icon="fas fa-circle" next-icon="fas fa-arrow-right" prev-icon="fas fa-arrow-left">
+                      <v-carousel-item>
+                        <img src="claro_collection.PNG" style="width: 100%; height: 100%;">
+                      </v-carousel-item>      
+                    </v-carousel>
+                  </v-card-media>
+                </v-card>
+              </v-dialog>
+            </v-btn><br />
+          </v-card-actions>
         </v-col>
         <v-divider></v-divider>
         <v-col md="3" offset-md="3">
           <v-card class="pa-2 py-12" outline tile height="250px" style="color:#1E1E1E">          
             <v-img cover src="simulador_capacitaciones.PNG" contain style="height: 500px;"></v-img>
           </v-card>
+          <v-card-actions>
+            <v-btn color="#111111" style="color:white" dark text class="ml-n4" append-icon="fa-solid fa-person-chalkboard">
+              Simulador de capacitaciones.
+              <v-dialog v-model="modalSimulador" activator="parent" width="auto" height="auto">
+                <v-card max-width="1000" min-width="auto">  
+                  <v-card-title primary-title>
+                    Proyecto realizado con VueJs/Vuetify y Laravel
+                  </v-card-title> 
+                  <v-card-media>                    
+                    <v-carousel show-arrows="hover" delimiter-icon="fas fa-circle" next-icon="fas fa-arrow-right" prev-icon="fas fa-arrow-left">
+                      <v-carousel-item>
+                        <img src="simulador_capacitaciones.PNG" style="width: 100%; height: 100%;">
+                      </v-carousel-item>                
+                    </v-carousel>
+                  </v-card-media>
+                </v-card>
+              </v-dialog>
+            </v-btn><br />
+          </v-card-actions>
         </v-col>
         <v-col md="3">
           <v-card class="pa-2 py-12" outline tile height="250px" style="color:#1E1E1E">
             <v-img cover src="usuarios/usuario-1.PNG" contain style="height: 500px;"></v-img>
           </v-card>
+          <v-card-actions>
+            <v-btn color="#111111" style="color:white" dark text class="ml-n4" append-icon="fa-solid fa-people-line">
+              Usuarios 
+              <v-dialog v-model="modalUsuarios" activator="parent" width="auto" height="auto">
+                <v-card max-width="1000" min-width="auto">
+                  <v-card-title primary-title>
+                    Proyecto realizado con VueJs/Vuetify y Laravel
+                  </v-card-title>
+                  <v-card-media>                    
+                    <v-carousel show-arrows="hover" delimiter-icon="fas fa-circle" next-icon="fas fa-arrow-right" prev-icon="fas fa-arrow-left">
+                      <v-carousel-item>
+                        <img src="usuarios/usuario-1.PNG" style="width: 100%; height: 100%;">
+                      </v-carousel-item>
+                    
+                      <v-carousel-item>
+                        <img src="usuarios/usuario-2.PNG" style="width: 100%; height: 100%;">
+                      </v-carousel-item>
+                    
+                      <v-carousel-item>
+                        <img src="usuarios/usuario-3.PNG" style="width: 100%; height: 100%;">
+                      </v-carousel-item>
+      
+                      <v-carousel-item>
+                        <img src="usuarios/usuario-3.PNG" style="width: 100%; height: 100%;">
+                      </v-carousel-item>
+                    </v-carousel>
+                  </v-card-media>          
+                </v-card>
+              </v-dialog>
+            </v-btn><br />
+          </v-card-actions>
         </v-col>
-        <v-col md="3" offset-md="3">
-          <v-btn color="#111111" style="color:white" dark text class="ml-n4" append-icon="fa-solid fa-person-chalkboard">
-            Simulador de capacitaciones.
-            <v-dialog v-model="modalSimulador" activator="parent" style="height: 500px;">
-              <v-card>   
-                <embed cover src="Simulador_de_capacitaciones.mp4" style="height: 500px;">                   
-              </v-card>
-            </v-dialog>
-          </v-btn><br />
-        </v-col>
-        <v-col md="3" >
-          <v-btn color="#111111" style="color:white" dark text class="ml-n4" append-icon="fa-solid fa-people-line">
-            Usuarios 
-            <v-dialog v-model="modalUsuarios" activator="parent" height="50%" width="50%" >
-              <v-card>          
-                <v-carousel show-arrows="hover" delimiter-icon="fas fa-circle" next-icon="fas fa-arrow-right" prev-icon="fas fa-arrow-left">
-                  <v-carousel-item
-                    src="usuarios/usuario-1.PNG" 
-                    width="auto"
-                  ></v-carousel-item>
-                
-                  <v-carousel-item
-                    src="usuarios/usuario-2.PNG"
-                    width="auto"
-                  ></v-carousel-item>
-                
-                  <v-carousel-item
-                    src="usuarios/usuario-3.PNG"
-                    width="auto"
-                  ></v-carousel-item>
-  
-                  <v-carousel-item
-                    src="usuarios/usuario-3.PNG"
-                    width="auto"
-                  ></v-carousel-item>
-                </v-carousel>
-              </v-card>
-            </v-dialog>
-          </v-btn><br />
-        </v-col>
-        <v-col cols="6" offset-md="3" justify="space-between">
+        <v-col cols="auto" align-self="center" justify="space-between">
           <ToolsComponent />
         </v-col>
         <v-col cols="12" class="padd topInverse">
@@ -203,9 +223,9 @@
             <div class="secondchild1" id="contact">
               <v-row>
                 <v-col cols="7">
-                  <h1 style="color:white">
+                  <h3 style="color:white">
                     ¡Gracias por tu visita!<br />
-                  </h1>
+                  </h3>
                   <p style="color:grey">
                     Si quieres contactarme y saber más sobre mi trabajo,
                           da click. <br />
@@ -386,5 +406,11 @@
   h5{
     font-family: fantasy;
   
+  }
+
+  @media screen and (max-width: 600px){
+    .ocultar-div{
+      display: none;
+    }
   }
   </style>
