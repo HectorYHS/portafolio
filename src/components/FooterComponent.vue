@@ -48,7 +48,7 @@ export default {
         return {
             icons: [
                 {"icon":"fas fa-brands fa-google","url":"mailto:postulantehuertas@gmail.com"},
-                {"icon":"fas fa-brands fa-linkedin","url":"https://www.linkedin.com/in/hector-yesid-huertas-segura-2246a217b/"},
+                {"icon":"fas fa-brands fa-linkedin","url":"https://www.linkedin.com/in/hector-huertas-062466287/"},
                 {"icon":"fas fa-brands fa-gitlab","url":"https://gitlab.com/hyhuertas"}
             ]
         }
